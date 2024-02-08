@@ -1,0 +1,707 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2023.1">
+  <Nodes>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="42" y="126" width="100" height="36" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Demographics</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor r="255" g="255" b="128" />
+          <Shape shape="0" />
+          <Justification Justification="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="23">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="16" y="233" width="481" height="759" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Container 23</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="True" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="8">
+          <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+            <Position x="42" y="294" width="100" height="36" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Text>Casualties</Text>
+              <Font name="Arial" size="8.25" style="0" />
+              <TextColor name="Black" />
+              <FillColor r="255" g="255" b="128" />
+              <Shape shape="0" />
+              <Justification Justification="0" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+        </Node>
+        <Node ToolID="9">
+          <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+            <Position x="42" y="449" width="100" height="36" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Text>Factors</Text>
+              <Font name="Arial" size="8.25" style="0" />
+              <TextColor name="Black" />
+              <FillColor r="255" g="255" b="128" />
+              <Shape shape="0" />
+              <Justification Justification="0" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+        </Node>
+        <Node ToolID="10">
+          <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+            <Position x="42" y="582" width="100" height="36" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Text>Locations</Text>
+              <Font name="Arial" size="8.25" style="0" />
+              <TextColor name="Black" />
+              <FillColor r="255" g="255" b="128" />
+              <Shape shape="0" />
+              <Justification Justification="0" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+        </Node>
+        <Node ToolID="11">
+          <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+            <Position x="41" y="726" width="100" height="36" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Text>Restraints</Text>
+              <Font name="Arial" size="8.25" style="0" />
+              <TextColor name="Black" />
+              <FillColor r="255" g="255" b="128" />
+              <Shape shape="0" />
+              <Justification Justification="0" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+        </Node>
+        <Node ToolID="12">
+          <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+            <Position x="41" y="870" width="100" height="36" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Text>Vehicles</Text>
+              <Font name="Arial" size="8.25" style="0" />
+              <TextColor name="Black" />
+              <FillColor r="255" g="255" b="128" />
+              <Shape shape="0" />
+              <Justification Justification="0" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+        </Node>
+        <Node ToolID="13">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="210" y="282" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">.\data\new records - casualties.yxdb</File>
+              <FormatSpecificOptions />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>new records - casualties.yxdb</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="14">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="366" y="282" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File MaxRecords="" FileFormat="75">aka:Pansi Supa Bulk|||store_casualties</File>
+              <Passwords />
+              <CachedCosmeticName />
+              <Disable>False</Disable>
+              <FormatSpecificOptions>
+                <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+                <PostSQL>DROP TABLE temp_demographics;</PostSQL>
+                <TableStyle>Quoted</TableStyle>
+                <AppendMap>
+                  <AppendMapping mode="Custom">
+                    <Field Source="year" Dest="year" />
+                    <Field Source="police_region" Dest="police_region" />
+                    <Field Source="severity" Dest="severity" />
+                    <Field Source="male_driver" Dest="male_driver" />
+                    <Field Source="female_driver" Dest="female_driver" />
+                    <Field Source="young_driver_16_24" Dest="young_driver_16_24" />
+                    <Field Source="senior_driver_60plus" Dest="senior_driver_60plus" />
+                    <Field Source="provisional_driver" Dest="provisional_driver" />
+                    <Field Source="overseas_licensed_driver" Dest="overseas_licensed_driver" />
+                    <Field Source="unlicensed_driver" Dest="unlicensed_driver" />
+                    <Field Source="count_crashes" Dest="count_crashes" />
+                    <Field Source="count_casualty_fatality" Dest="count_casualty_fatality" />
+                    <Field Source="count_casualty_hospitalised" Dest="count_casualty_hospitalised" />
+                    <Field Source="count_casualty_medicallytreated" Dest="count_casualty_medicallytreated" />
+                    <Field Source="count_casualty_minorinjury" Dest="count_casualty_minorinjury" />
+                    <Field Source="count_casualty_all" Dest="count_casualty_all" />
+                    <Field Source="uid" Dest="uid" />
+                    <Field Source="dss_createdate" Dest="dss_created_datetime" />
+                    <Field Source="active" Dest="active" />
+                  </AppendMapping>
+                </AppendMap>
+                <PreSQL />
+                <OutputOption>Append</OutputOption>
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>aka:Pansi Supa Bulk
+Query=store_casualties</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+        <Node ToolID="15">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="210" y="426" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">.\data\new records - factors.yxdb</File>
+              <FormatSpecificOptions />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>new records - factors.yxdb</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="16">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="366" y="426" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File MaxRecords="" FileFormat="75">aka:Pansi Supa Bulk|||store_factors</File>
+              <Passwords />
+              <CachedCosmeticName />
+              <Disable>False</Disable>
+              <FormatSpecificOptions>
+                <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+                <PostSQL>DROP TABLE temp_demographics;</PostSQL>
+                <TableStyle>Quoted</TableStyle>
+                <AppendMap>
+                  <AppendMapping mode="Custom">
+                    <Field Source="year" Dest="year" />
+                    <Field Source="police_region" Dest="police_region" />
+                    <Field Source="severity" Dest="severity" />
+                    <Field Source="male_driver" Dest="male_driver" />
+                    <Field Source="female_driver" Dest="female_driver" />
+                    <Field Source="young_driver_16_24" Dest="young_driver_16_24" />
+                    <Field Source="senior_driver_60plus" Dest="senior_driver_60plus" />
+                    <Field Source="provisional_driver" Dest="provisional_driver" />
+                    <Field Source="overseas_licensed_driver" Dest="overseas_licensed_driver" />
+                    <Field Source="unlicensed_driver" Dest="unlicensed_driver" />
+                    <Field Source="count_crashes" Dest="count_crashes" />
+                    <Field Source="count_casualty_fatality" Dest="count_casualty_fatality" />
+                    <Field Source="count_casualty_hospitalised" Dest="count_casualty_hospitalised" />
+                    <Field Source="count_casualty_medicallytreated" Dest="count_casualty_medicallytreated" />
+                    <Field Source="count_casualty_minorinjury" Dest="count_casualty_minorinjury" />
+                    <Field Source="count_casualty_all" Dest="count_casualty_all" />
+                    <Field Source="uid" Dest="uid" />
+                    <Field Source="dss_createdate" Dest="dss_created_datetime" />
+                    <Field Source="active" Dest="active" />
+                  </AppendMapping>
+                </AppendMap>
+                <PreSQL />
+                <OutputOption>Append</OutputOption>
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>aka:Pansi Supa Bulk
+Query=store_factors</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+        <Node ToolID="17">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="210" y="570" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">.\data\new records - locations.yxdb</File>
+              <FormatSpecificOptions />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>new records - locations.yxdb</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="18">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="366" y="570" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File MaxRecords="" FileFormat="75">aka:Pansi Supa Bulk|||store_locations</File>
+              <Passwords />
+              <CachedCosmeticName />
+              <Disable>False</Disable>
+              <FormatSpecificOptions>
+                <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+                <PostSQL>DROP TABLE temp_demographics;</PostSQL>
+                <TableStyle>Quoted</TableStyle>
+                <AppendMap>
+                  <AppendMapping mode="Custom">
+                    <Field Source="year" Dest="year" />
+                    <Field Source="police_region" Dest="police_region" />
+                    <Field Source="severity" Dest="severity" />
+                    <Field Source="male_driver" Dest="male_driver" />
+                    <Field Source="female_driver" Dest="female_driver" />
+                    <Field Source="young_driver_16_24" Dest="young_driver_16_24" />
+                    <Field Source="senior_driver_60plus" Dest="senior_driver_60plus" />
+                    <Field Source="provisional_driver" Dest="provisional_driver" />
+                    <Field Source="overseas_licensed_driver" Dest="overseas_licensed_driver" />
+                    <Field Source="unlicensed_driver" Dest="unlicensed_driver" />
+                    <Field Source="count_crashes" Dest="count_crashes" />
+                    <Field Source="count_casualty_fatality" Dest="count_casualty_fatality" />
+                    <Field Source="count_casualty_hospitalised" Dest="count_casualty_hospitalised" />
+                    <Field Source="count_casualty_medicallytreated" Dest="count_casualty_medicallytreated" />
+                    <Field Source="count_casualty_minorinjury" Dest="count_casualty_minorinjury" />
+                    <Field Source="count_casualty_all" Dest="count_casualty_all" />
+                    <Field Source="uid" Dest="uid" />
+                    <Field Source="dss_createdate" Dest="dss_created_datetime" />
+                    <Field Source="active" Dest="active" />
+                  </AppendMapping>
+                </AppendMap>
+                <PreSQL />
+                <OutputOption>Append</OutputOption>
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>aka:Pansi Supa Bulk
+Query=store_locations</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+        <Node ToolID="19">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="209" y="714" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">.\data\new records - restraints.yxdb</File>
+              <FormatSpecificOptions />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>new records - restraints.yxdb</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="20">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="366" y="714" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File MaxRecords="" FileFormat="75">aka:Pansi Supa Bulk|||store_seatbelt</File>
+              <Passwords />
+              <Disable>False</Disable>
+              <FormatSpecificOptions>
+                <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+                <PostSQL>DROP TABLE temp_demographics;</PostSQL>
+                <TableStyle>Quoted</TableStyle>
+                <AppendMap>
+                  <AppendMapping mode="Custom">
+                    <Field Source="year" Dest="year" />
+                    <Field Source="police_region" Dest="police_region" />
+                    <Field Source="severity" Dest="severity" />
+                    <Field Source="male_driver" Dest="male_driver" />
+                    <Field Source="female_driver" Dest="female_driver" />
+                    <Field Source="young_driver_16_24" Dest="young_driver_16_24" />
+                    <Field Source="senior_driver_60plus" Dest="senior_driver_60plus" />
+                    <Field Source="provisional_driver" Dest="provisional_driver" />
+                    <Field Source="overseas_licensed_driver" Dest="overseas_licensed_driver" />
+                    <Field Source="unlicensed_driver" Dest="unlicensed_driver" />
+                    <Field Source="count_crashes" Dest="count_crashes" />
+                    <Field Source="count_casualty_fatality" Dest="count_casualty_fatality" />
+                    <Field Source="count_casualty_hospitalised" Dest="count_casualty_hospitalised" />
+                    <Field Source="count_casualty_medicallytreated" Dest="count_casualty_medicallytreated" />
+                    <Field Source="count_casualty_minorinjury" Dest="count_casualty_minorinjury" />
+                    <Field Source="count_casualty_all" Dest="count_casualty_all" />
+                    <Field Source="uid" Dest="uid" />
+                    <Field Source="dss_createdate" Dest="dss_created_datetime" />
+                    <Field Source="active" Dest="active" />
+                  </AppendMapping>
+                </AppendMap>
+                <PreSQL />
+                <OutputOption>Append</OutputOption>
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>aka:Pansi Supa Bulk
+Query=store_seatbelt</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+        <Node ToolID="21">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="209" y="846" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">.\data\new records - vehicles.yxdb</File>
+              <FormatSpecificOptions />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>new records - vehicles.yxdb</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="22">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="366" y="846" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File MaxRecords="" FileFormat="75">aka:Pansi Supa Bulk|||store_vtypes</File>
+              <Passwords />
+              <CachedCosmeticName />
+              <Disable>False</Disable>
+              <FormatSpecificOptions>
+                <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+                <PostSQL>DROP TABLE temp_demographics;</PostSQL>
+                <TableStyle>Quoted</TableStyle>
+                <AppendMap>
+                  <AppendMapping mode="Custom">
+                    <Field Source="year" Dest="year" />
+                    <Field Source="police_region" Dest="police_region" />
+                    <Field Source="severity" Dest="severity" />
+                    <Field Source="male_driver" Dest="male_driver" />
+                    <Field Source="female_driver" Dest="female_driver" />
+                    <Field Source="young_driver_16_24" Dest="young_driver_16_24" />
+                    <Field Source="senior_driver_60plus" Dest="senior_driver_60plus" />
+                    <Field Source="provisional_driver" Dest="provisional_driver" />
+                    <Field Source="overseas_licensed_driver" Dest="overseas_licensed_driver" />
+                    <Field Source="unlicensed_driver" Dest="unlicensed_driver" />
+                    <Field Source="count_crashes" Dest="count_crashes" />
+                    <Field Source="count_casualty_fatality" Dest="count_casualty_fatality" />
+                    <Field Source="count_casualty_hospitalised" Dest="count_casualty_hospitalised" />
+                    <Field Source="count_casualty_medicallytreated" Dest="count_casualty_medicallytreated" />
+                    <Field Source="count_casualty_minorinjury" Dest="count_casualty_minorinjury" />
+                    <Field Source="count_casualty_all" Dest="count_casualty_all" />
+                    <Field Source="uid" Dest="uid" />
+                    <Field Source="dss_createdate" Dest="dss_created_datetime" />
+                    <Field Source="active" Dest="active" />
+                  </AppendMapping>
+                </AppendMap>
+                <PreSQL />
+                <OutputOption>Append</OutputOption>
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>aka:Pansi Supa Bulk
+Query=store_vtypes</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="197" y="53" width="328" height="195" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Appending new rows of data to the database</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Appending new rows of data to the database</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="1">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="222" y="102" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">.\data\new records - demographics.yxdb</File>
+              <FormatSpecificOptions />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>new records - demographics.yxdb</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="year" size="16777216" source="File: odbc:DSN=PANSI;UID=postgres.eomcpaifrcnaezmrdvax;PWD=__EncPwd1__|||select * &#xA;from postgres.&quot;public&quot;.load_demographics" type="V_String" />
+                <Field name="police_region" size="16777216" source="File: odbc:DSN=PANSI;UID=postgres.eomcpaifrcnaezmrdvax;PWD=__EncPwd1__|||select * &#xA;from postgres.&quot;public&quot;.load_demographics" type="V_String" />
+                <Field name="severity" size="16777216" source="File: odbc:DSN=PANSI;UID=postgres.eomcpaifrcnaezmrdvax;PWD=__EncPwd1__|||select * &#xA;from postgres.&quot;public&quot;.load_demographics" type="V_String" />
+                <Field name="male_driver" size="16777216" source="File: odbc:DSN=PANSI;UID=postgres.eomcpaifrcnaezmrdvax;PWD=__EncPwd1__|||select * &#xA;from postgres.&quot;public&quot;.load_demographics" type="V_String" />
+                <Field name="female_driver" size="16777216" source="File: odbc:DSN=PANSI;UID=postgres.eomcpaifrcnaezmrdvax;PWD=__EncPwd1__|||select * &#xA;from postgres.&quot;public&quot;.load_demographics" type="V_String" />
+                <Field name="young_driver_16_24" size="16777216" source="File: odbc:DSN=PANSI;UID=postgres.eomcpaifrcnaezmrdvax;PWD=__EncPwd1__|||select * &#xA;from postgres.&quot;public&quot;.load_demographics" type="V_String" />
+                <Field name="senior_driver_60plus" size="16777216" source="File: odbc:DSN=PANSI;UID=postgres.eomcpaifrcnaezmrdvax;PWD=__EncPwd1__|||select * &#xA;from postgres.&quot;public&quot;.load_demographics" type="V_String" />
+                <Field name="provisional_driver" size="16777216" source="File: odbc:DSN=PANSI;UID=postgres.eomcpaifrcnaezmrdvax;PWD=__EncPwd1__|||select * &#xA;from postgres.&quot;public&quot;.load_demographics" type="V_String" />
+                <Field name="overseas_licensed_driver" size="16777216" source="File: odbc:DSN=PANSI;UID=postgres.eomcpaifrcnaezmrdvax;PWD=__EncPwd1__|||select * &#xA;from postgres.&quot;public&quot;.load_demographics" type="V_String" />
+                <Field name="unlicensed_driver" size="16777216" source="File: odbc:DSN=PANSI;UID=postgres.eomcpaifrcnaezmrdvax;PWD=__EncPwd1__|||select * &#xA;from postgres.&quot;public&quot;.load_demographics" type="V_String" />
+                <Field name="count_crashes" source="File: odbc:DSN=PANSI;UID=postgres.eomcpaifrcnaezmrdvax;PWD=__EncPwd1__|||select * &#xA;from postgres.&quot;public&quot;.load_demographics" type="Int64" />
+                <Field name="count_casualty_fatality" source="File: odbc:DSN=PANSI;UID=postgres.eomcpaifrcnaezmrdvax;PWD=__EncPwd1__|||select * &#xA;from postgres.&quot;public&quot;.load_demographics" type="Int64" />
+                <Field name="count_casualty_hospitalised" source="(Multiple Sources)" type="Int64" />
+                <Field name="count_casualty_medicallytreated" source="File: odbc:DSN=PANSI;UID=postgres.eomcpaifrcnaezmrdvax;PWD=__EncPwd1__|||select * &#xA;from postgres.&quot;public&quot;.load_demographics" type="Int64" />
+                <Field name="count_casualty_minorinjury" source="File: odbc:DSN=PANSI;UID=postgres.eomcpaifrcnaezmrdvax;PWD=__EncPwd1__|||select * &#xA;from postgres.&quot;public&quot;.load_demographics" type="Int64" />
+                <Field name="count_casualty_all" source="File: odbc:DSN=PANSI;UID=postgres.eomcpaifrcnaezmrdvax;PWD=__EncPwd1__|||select * &#xA;from postgres.&quot;public&quot;.load_demographics" type="Int32" />
+                <Field name="uid" size="1073741823" source="Formula: MD5_UNICODE([year] + [police_region] +[severity] +[male_driver] +[female_driver]+ [young_driver_16_24] +[senior_driver_60plus] +[provisional_driver] +[overseas_licensed_driver] +[unlicensed_driver])" type="V_WString" />
+                <Field name="dss_createdate" source="Formula: DateTimeNow()" type="DateTime" />
+                <Field name="active" size="1073741823" source="Formula: &quot;Y&quot;" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="5">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="342" y="102" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File MaxRecords="" FileFormat="75">aka:Pansi Supa Bulk|||store_demographics</File>
+              <Passwords />
+              <CachedCosmeticName />
+              <Disable>False</Disable>
+              <FormatSpecificOptions>
+                <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+                <PostSQL>DROP TABLE temp_demographics;</PostSQL>
+                <TableStyle>Quoted</TableStyle>
+                <AppendMap>
+                  <AppendMapping mode="Custom">
+                    <Field Source="year" Dest="year" />
+                    <Field Source="police_region" Dest="police_region" />
+                    <Field Source="severity" Dest="severity" />
+                    <Field Source="male_driver" Dest="male_driver" />
+                    <Field Source="female_driver" Dest="female_driver" />
+                    <Field Source="young_driver_16_24" Dest="young_driver_16_24" />
+                    <Field Source="senior_driver_60plus" Dest="senior_driver_60plus" />
+                    <Field Source="provisional_driver" Dest="provisional_driver" />
+                    <Field Source="overseas_licensed_driver" Dest="overseas_licensed_driver" />
+                    <Field Source="unlicensed_driver" Dest="unlicensed_driver" />
+                    <Field Source="count_crashes" Dest="count_crashes" />
+                    <Field Source="count_casualty_fatality" Dest="count_casualty_fatality" />
+                    <Field Source="count_casualty_hospitalised" Dest="count_casualty_hospitalised" />
+                    <Field Source="count_casualty_medicallytreated" Dest="count_casualty_medicallytreated" />
+                    <Field Source="count_casualty_minorinjury" Dest="count_casualty_minorinjury" />
+                    <Field Source="count_casualty_all" Dest="count_casualty_all" />
+                    <Field Source="uid" Dest="uid" />
+                    <Field Source="dss_createdate" Dest="dss_created_datetime" />
+                    <Field Source="active" Dest="active" />
+                  </AppendMapping>
+                </AppendMap>
+                <PreSQL />
+                <OutputOption>Append</OutputOption>
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>aka:Pansi Supa Bulk
+Query=store_demographics</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+      </ChildNodes>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="13" Connection="Output" />
+      <Destination ToolID="14" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="15" Connection="Output" />
+      <Destination ToolID="16" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="17" Connection="Output" />
+      <Destination ToolID="18" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="19" Connection="Output" />
+      <Destination ToolID="20" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="21" Connection="Output" />
+      <Destination ToolID="22" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>02.3_STORE processnewrecords</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="67125417-fcf0-4701-95c7-04dfbaf0b18e" />
+      <Telemetry>
+        <PreviousWorkflowId value="5daa6eb5-a261-4bf6-be55-96017feeb467" />
+        <OriginWorkflowId value="eddad944-f341-47a3-88f0-cb95f8cba035" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

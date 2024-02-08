@@ -1,0 +1,839 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2023.1">
+  <Nodes>
+    <Node ToolID="117">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="366" y="174" width="112" height="72" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text />
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor r="217" g="217" b="255" />
+          <Shape shape="0" />
+          <Justification Justification="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="115">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="258" y="54" width="112" height="84" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text />
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor r="217" g="217" b="255" />
+          <Shape shape="0" />
+          <Justification Justification="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="51">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="198" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords>45A751647142B366E0D5644370F8CB8065A2A7FA4CDC7B6B05B2B638CCE7E</Passwords>
+          <File RecordLimit="" FileFormat="23">odbc:DSN=PANSI;UID=postgres.eomcpaifrcnaezmrdvax;PWD=__EncPwd1__|||select * 
+from postgres."public".load_demographics</File>
+          <FormatSpecificOptions>
+            <PreSQL />
+            <ReadCentroids>False</ReadCentroids>
+            <PreSQLOnConfig>True</PreSQLOnConfig>
+            <NoProgress>True</NoProgress>
+            <SessionReadOnly>True</SessionReadOnly>
+            <CacheData>False</CacheData>
+            <TableStyle>Quoted</TableStyle>
+            <ReadUncommitted>False</ReadUncommitted>
+            <PostSQL />
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name>Load</Name>
+          <AnnotationText>Load</AnnotationText>
+          <DefaultAnnotationText>DSN=PANSI
+Query=select * 
+from postgres."pu...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="id" size="16777216" source="File: odbc:DSN=PANSI;UID=postgres.eomcpaifrcnaezmrdvax;PWD=__EncPwd1__|||select * &#xA;from postgres.&quot;public&quot;.load_demographics" type="V_String" />
+            <Field name="crash_year" size="16777216" source="File: odbc:DSN=PANSI;UID=postgres.eomcpaifrcnaezmrdvax;PWD=__EncPwd1__|||select * &#xA;from postgres.&quot;public&quot;.load_demographics" type="V_String" />
+            <Field name="crash_police_region" size="16777216" source="File: odbc:DSN=PANSI;UID=postgres.eomcpaifrcnaezmrdvax;PWD=__EncPwd1__|||select * &#xA;from postgres.&quot;public&quot;.load_demographics" type="V_String" />
+            <Field name="crash_severity" size="16777216" source="File: odbc:DSN=PANSI;UID=postgres.eomcpaifrcnaezmrdvax;PWD=__EncPwd1__|||select * &#xA;from postgres.&quot;public&quot;.load_demographics" type="V_String" />
+            <Field name="involving_male_driver" size="16777216" source="File: odbc:DSN=PANSI;UID=postgres.eomcpaifrcnaezmrdvax;PWD=__EncPwd1__|||select * &#xA;from postgres.&quot;public&quot;.load_demographics" type="V_String" />
+            <Field name="involving_female_driver" size="16777216" source="File: odbc:DSN=PANSI;UID=postgres.eomcpaifrcnaezmrdvax;PWD=__EncPwd1__|||select * &#xA;from postgres.&quot;public&quot;.load_demographics" type="V_String" />
+            <Field name="involving_young_driver_16_24" size="16777216" source="File: odbc:DSN=PANSI;UID=postgres.eomcpaifrcnaezmrdvax;PWD=__EncPwd1__|||select * &#xA;from postgres.&quot;public&quot;.load_demographics" type="V_String" />
+            <Field name="involving_senior_driver_60plus" size="16777216" source="File: odbc:DSN=PANSI;UID=postgres.eomcpaifrcnaezmrdvax;PWD=__EncPwd1__|||select * &#xA;from postgres.&quot;public&quot;.load_demographics" type="V_String" />
+            <Field name="involving_provisional_driver" size="16777216" source="File: odbc:DSN=PANSI;UID=postgres.eomcpaifrcnaezmrdvax;PWD=__EncPwd1__|||select * &#xA;from postgres.&quot;public&quot;.load_demographics" type="V_String" />
+            <Field name="involving_overseas_licensed_driver" size="16777216" source="File: odbc:DSN=PANSI;UID=postgres.eomcpaifrcnaezmrdvax;PWD=__EncPwd1__|||select * &#xA;from postgres.&quot;public&quot;.load_demographics" type="V_String" />
+            <Field name="involving_unlicensed_driver" size="16777216" source="File: odbc:DSN=PANSI;UID=postgres.eomcpaifrcnaezmrdvax;PWD=__EncPwd1__|||select * &#xA;from postgres.&quot;public&quot;.load_demographics" type="V_String" />
+            <Field name="count_crashes" size="16777216" source="File: odbc:DSN=PANSI;UID=postgres.eomcpaifrcnaezmrdvax;PWD=__EncPwd1__|||select * &#xA;from postgres.&quot;public&quot;.load_demographics" type="V_String" />
+            <Field name="count_casualty_fatality" size="16777216" source="File: odbc:DSN=PANSI;UID=postgres.eomcpaifrcnaezmrdvax;PWD=__EncPwd1__|||select * &#xA;from postgres.&quot;public&quot;.load_demographics" type="V_String" />
+            <Field name="count_casualty_hospitalised" size="16777216" source="File: odbc:DSN=PANSI;UID=postgres.eomcpaifrcnaezmrdvax;PWD=__EncPwd1__|||select * &#xA;from postgres.&quot;public&quot;.load_demographics" type="V_String" />
+            <Field name="count_casualty_medicallytreated" size="16777216" source="File: odbc:DSN=PANSI;UID=postgres.eomcpaifrcnaezmrdvax;PWD=__EncPwd1__|||select * &#xA;from postgres.&quot;public&quot;.load_demographics" type="V_String" />
+            <Field name="count_casualty_minorinjury" size="16777216" source="File: odbc:DSN=PANSI;UID=postgres.eomcpaifrcnaezmrdvax;PWD=__EncPwd1__|||select * &#xA;from postgres.&quot;public&quot;.load_demographics" type="V_String" />
+            <Field name="count_casualty_all" size="16777216" source="File: odbc:DSN=PANSI;UID=postgres.eomcpaifrcnaezmrdvax;PWD=__EncPwd1__|||select * &#xA;from postgres.&quot;public&quot;.load_demographics" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="52">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="318" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="MD5_UNICODE([year] + [police_region] +[severity] +[male_driver] +[female_driver]+ [young_driver_16_24] +[senior_driver_60plus] +[provisional_driver] +[overseas_licensed_driver] +[unlicensed_driver])" field="uid" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>id for load</AnnotationText>
+          <DefaultAnnotationText>uid = MD5_UNICODE([year] + [police_region] +[severity] +[male_driver] +[female_d...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="57">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="390" y="114" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="uid" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="uid" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_year" selected="True" rename="S_year" input="Left_" />
+                <SelectField field="Left_police_region" selected="True" rename="S_police_region" input="Left_" />
+                <SelectField field="Left_severity" selected="True" rename="S_severity" input="Left_" />
+                <SelectField field="Left_male_driver" selected="True" rename="S_male_driver" input="Left_" />
+                <SelectField field="Left_female_driver" selected="True" rename="S_female_driver" input="Left_" />
+                <SelectField field="Left_young_driver_16_24" selected="True" rename="S_young_driver_16_24" input="Left_" />
+                <SelectField field="Left_senior_driver_60plus" selected="True" rename="S_senior_driver_60plus" input="Left_" />
+                <SelectField field="Left_provisional_driver" selected="True" rename="S_provisional_driver" input="Left_" />
+                <SelectField field="Left_overseas_licensed_driver" selected="True" rename="S_overseas_licensed_driver" input="Left_" />
+                <SelectField field="Left_unlicensed_driver" selected="True" rename="S_unlicensed_driver" input="Left_" />
+                <SelectField field="Left_Count_Crashes" selected="True" rename="S_Count_Crashes" input="Left_" />
+                <SelectField field="Left_Count_Casualty_Fatality" selected="True" rename="S_Count_Casualty_Fatality" input="Left_" />
+                <SelectField field="Left_Count_Casualty_Hospitalised" selected="True" rename="S_Count_Casualty_Hospitalised" input="Left_" />
+                <SelectField field="Left_Count_Casualty_MedicallyTreated" selected="True" rename="S_Count_Casualty_MedicallyTreated" input="Left_" />
+                <SelectField field="Left_Count_Casualty_MinorInjury" selected="True" rename="S_Count_Casualty_MinorInjury" input="Left_" />
+                <SelectField field="Left_Count_Casualty_All" selected="True" rename="S_Count_Casualty_All" input="Left_" />
+                <SelectField field="Left_uid" selected="True" rename="S_uid" input="Left_" />
+                <SelectField field="Right_uid" selected="True" rename="D_uid" input="Right_" />
+                <SelectField field="Right_year" selected="True" rename="D_year" input="Right_" />
+                <SelectField field="Right_police_region" selected="True" rename="D_police_region" input="Right_" />
+                <SelectField field="Right_severity" selected="True" rename="D_severity" input="Right_" />
+                <SelectField field="Right_male_driver" selected="True" rename="D_male_driver" input="Right_" />
+                <SelectField field="Right_female_driver" selected="True" rename="D_female_driver" input="Right_" />
+                <SelectField field="Right_young_driver_16_24" selected="True" rename="D_young_driver_16_24" input="Right_" />
+                <SelectField field="Right_senior_driver_60plus" selected="True" rename="D_senior_driver_60plus" input="Right_" />
+                <SelectField field="Right_provisional_driver" selected="True" rename="D_provisional_driver" input="Right_" />
+                <SelectField field="Right_overseas_licensed_driver" selected="True" rename="D_overseas_licensed_driver" input="Right_" />
+                <SelectField field="Right_unlicensed_driver" selected="True" rename="D_unlicensed_driver" input="Right_" />
+                <SelectField field="Right_Count_Crashes" selected="True" rename="D_Count_Crashes" input="Right_" />
+                <SelectField field="Right_Count_Casualty_Fatality" selected="True" rename="D_Count_Casualty_Fatality" input="Right_" />
+                <SelectField field="Right_Count_Casualty_Hospitalised" selected="True" rename="D_Count_Casualty_Hospitalised" input="Right_" />
+                <SelectField field="Right_Count_Casualty_MedicallyTreated" selected="True" rename="D_Count_Casualty_MedicallyTreated" input="Right_" />
+                <SelectField field="Right_Count_Casualty_MinorInjury" selected="True" rename="D_Count_Casualty_MinorInjury" input="Right_" />
+                <SelectField field="Right_Count_Casualty_All" selected="True" rename="D_Count_Casualty_All" input="Right_" />
+                <SelectField field="Right_dss_created_datetime" selected="True" rename="D_dss_created_datetime" input="Right_" />
+                <SelectField field="Right_active" selected="True" rename="D_active" input="Right_" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="58">
+      <GuiSettings>
+        <Position x="546" y="116" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="Name Field">Name</Value>
+          <Value name="Type Field">Type</Value>
+          <Value name="Size Field">Size</Value>
+          <Value name="Expression Field">Expression</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Fields check</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="S_year" size="8190" source="File: select * &#xA;from &quot;load_demographics&quot;" type="V_WString" />
+            <Field name="S_police_region" size="8190" source="File: select * &#xA;from &quot;load_demographics&quot;" type="V_WString" />
+            <Field name="S_severity" size="8190" source="File: select * &#xA;from &quot;load_demographics&quot;" type="V_WString" />
+            <Field name="S_male_driver" size="8190" source="File: select * &#xA;from &quot;load_demographics&quot;" type="V_WString" />
+            <Field name="S_female_driver" size="8190" source="File: select * &#xA;from &quot;load_demographics&quot;" type="V_WString" />
+            <Field name="S_young_driver_16_24" size="8190" source="File: select * &#xA;from &quot;load_demographics&quot;" type="V_WString" />
+            <Field name="S_senior_driver_60plus" size="8190" source="File: select * &#xA;from &quot;load_demographics&quot;" type="V_WString" />
+            <Field name="S_provisional_driver" size="8190" source="File: select * &#xA;from &quot;load_demographics&quot;" type="V_WString" />
+            <Field name="S_overseas_licensed_driver" size="8190" source="File: select * &#xA;from &quot;load_demographics&quot;" type="V_WString" />
+            <Field name="S_unlicensed_driver" size="8190" source="File: select * &#xA;from &quot;load_demographics&quot;" type="V_WString" />
+            <Field name="S_Count_Crashes" source="File: select * &#xA;from &quot;load_demographics&quot;" type="Int64" />
+            <Field name="S_Count_Casualty_Fatality" source="File: select * &#xA;from &quot;load_demographics&quot;" type="Int64" />
+            <Field name="S_Count_Casualty_Hospitalised" source="Formula: IF [S_Count_Casualty_Hospitalised] = 1 THEN 2 ELSE [S_Count_Casualty_Hospitalised] ENDIF" type="Int64" />
+            <Field name="S_Count_Casualty_MedicallyTreated" source="File: select * &#xA;from &quot;load_demographics&quot;" type="Int64" />
+            <Field name="S_Count_Casualty_MinorInjury" source="File: select * &#xA;from &quot;load_demographics&quot;" type="Int64" />
+            <Field name="S_Count_Casualty_All" source="File: select * &#xA;from &quot;load_demographics&quot;" type="Int32" />
+            <Field name="S_uid" size="1073741823" source="Formula: MD5_UNICODE([year] + [police_region] +[severity] +[male_driver] +[female_driver]+ [young_driver_16_24] +[senior_driver_60plus] +[provisional_driver] +[overseas_licensed_driver] +[unlicensed_driver])" type="V_WString" />
+            <Field name="D_uid" size="8190" source="File: select * &#xA;from &quot;store_demographics&quot;&#xA;where &quot;active&quot; = 'Y'" type="V_WString" />
+            <Field name="D_year" size="8190" source="File: select * &#xA;from &quot;store_demographics&quot;&#xA;where &quot;active&quot; = 'Y'" type="V_WString" />
+            <Field name="D_police_region" size="8190" source="File: select * &#xA;from &quot;store_demographics&quot;&#xA;where &quot;active&quot; = 'Y'" type="V_WString" />
+            <Field name="D_severity" size="8190" source="File: select * &#xA;from &quot;store_demographics&quot;&#xA;where &quot;active&quot; = 'Y'" type="V_WString" />
+            <Field name="D_male_driver" size="8190" source="File: select * &#xA;from &quot;store_demographics&quot;&#xA;where &quot;active&quot; = 'Y'" type="V_WString" />
+            <Field name="D_female_driver" size="8190" source="File: select * &#xA;from &quot;store_demographics&quot;&#xA;where &quot;active&quot; = 'Y'" type="V_WString" />
+            <Field name="D_young_driver_16_24" size="8190" source="File: select * &#xA;from &quot;store_demographics&quot;&#xA;where &quot;active&quot; = 'Y'" type="V_WString" />
+            <Field name="D_senior_driver_60plus" size="8190" source="File: select * &#xA;from &quot;store_demographics&quot;&#xA;where &quot;active&quot; = 'Y'" type="V_WString" />
+            <Field name="D_provisional_driver" size="8190" source="File: select * &#xA;from &quot;store_demographics&quot;&#xA;where &quot;active&quot; = 'Y'" type="V_WString" />
+            <Field name="D_overseas_licensed_driver" size="8190" source="File: select * &#xA;from &quot;store_demographics&quot;&#xA;where &quot;active&quot; = 'Y'" type="V_WString" />
+            <Field name="D_unlicensed_driver" size="8190" source="File: select * &#xA;from &quot;store_demographics&quot;&#xA;where &quot;active&quot; = 'Y'" type="V_WString" />
+            <Field name="D_Count_Crashes" source="File: select * &#xA;from &quot;store_demographics&quot;&#xA;where &quot;active&quot; = 'Y'" type="Int64" />
+            <Field name="D_Count_Casualty_Fatality" source="File: select * &#xA;from &quot;store_demographics&quot;&#xA;where &quot;active&quot; = 'Y'" type="Int64" />
+            <Field name="D_Count_Casualty_Hospitalised" source="File: select * &#xA;from &quot;store_demographics&quot;&#xA;where &quot;active&quot; = 'Y'" type="Int64" />
+            <Field name="D_Count_Casualty_MedicallyTreated" source="File: select * &#xA;from &quot;store_demographics&quot;&#xA;where &quot;active&quot; = 'Y'" type="Int64" />
+            <Field name="D_Count_Casualty_MinorInjury" source="File: select * &#xA;from &quot;store_demographics&quot;&#xA;where &quot;active&quot; = 'Y'" type="Int64" />
+            <Field name="D_Count_Casualty_All" source="File: select * &#xA;from &quot;store_demographics&quot;&#xA;where &quot;active&quot; = 'Y'" type="Int64" />
+            <Field name="D_dss_created_datetime" source="File: select * &#xA;from &quot;store_demographics&quot;&#xA;where &quot;active&quot; = 'Y'" type="DateTime" />
+            <Field name="D_active" size="8190" source="File: select * &#xA;from &quot;store_demographics&quot;&#xA;where &quot;active&quot; = 'Y'" type="V_WString" />
+            <Field name="CHK_count_crashes" source="Formula: IF [S_count_crashes]=[D_count_crashes] THEN 0 ELSE 1 ENDIF" type="Int32" />
+            <Field name="CHK_count_casualty_fatality" source="Formula: IF [S_count_casualty_fatality]=[D_count_casualty_fatality] THEN 0 ELSE 1 ENDIF" type="Int32" />
+            <Field name="CHK_count_casualty_hospitalised" source="Formula: IF [S_count_casualty_hospitalised]=[D_count_casualty_hospitalised] THEN 0 ELSE 1 ENDIF" type="Int32" />
+            <Field name="CHK_count_casualty_medicallytreated" source="Formula: IF [S_count_casualty_medicallytreated]=[D_count_casualty_medicallytreated] THEN 0 ELSE 1 ENDIF" type="Int32" />
+            <Field name="CHK_count_casualty_minorinjury" source="Formula: IF [S_count_casualty_minorinjury]=[D_count_casualty_minorinjury] THEN 0 ELSE 1 ENDIF" type="Int32" />
+            <Field name="CHK_count_casualty_all" source="Formula: IF [S_count_casualty_all]=[D_count_casualty_all] THEN 0 ELSE 1 ENDIF" type="Int32" />
+            <Field name="CHK_TOTAL" source="Formula: [CHK_count_crashes]+[CHK_count_casualty_fatality]+[CHK_count_casualty_hospitalised]+[CHK_count_casualty_medicallytreated]+[CHK_count_casualty_minorinjury]+[CHK_count_casualty_all]" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings Macro="CReW_DynamicFormula.yxmc" />
+    </Node>
+    <Node ToolID="83">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="198" y="140" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords>45A751647142B366E0D5644370F8CB8065A2A7FA4CDC7B6B05B2B638CCE7E</Passwords>
+          <File RecordLimit="" FileFormat="23">odbc:DSN=PANSI;UID=postgres.eomcpaifrcnaezmrdvax;PWD=__EncPwd1__|||select * 
+from postgres."public".store_demographics</File>
+          <FormatSpecificOptions>
+            <PreSQL />
+            <ReadCentroids>False</ReadCentroids>
+            <PreSQLOnConfig>True</PreSQLOnConfig>
+            <NoProgress>True</NoProgress>
+            <SessionReadOnly>True</SessionReadOnly>
+            <CacheData>False</CacheData>
+            <TableStyle>Quoted</TableStyle>
+            <ReadUncommitted>False</ReadUncommitted>
+            <PostSQL />
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Store</AnnotationText>
+          <DefaultAnnotationText>DSN=PANSI
+Query=select * 
+from postgres."pu...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="uid" size="16777216" source="File: odbc:DSN=PANSI;UID=postgres.eomcpaifrcnaezmrdvax;PWD=__EncPwd1__|||select * &#xA;from postgres.&quot;public&quot;.store_demographics" type="V_String" />
+            <Field name="year" size="16777216" source="File: odbc:DSN=PANSI;UID=postgres.eomcpaifrcnaezmrdvax;PWD=__EncPwd1__|||select * &#xA;from postgres.&quot;public&quot;.store_demographics" type="V_String" />
+            <Field name="police_region" size="16777216" source="File: odbc:DSN=PANSI;UID=postgres.eomcpaifrcnaezmrdvax;PWD=__EncPwd1__|||select * &#xA;from postgres.&quot;public&quot;.store_demographics" type="V_String" />
+            <Field name="severity" size="16777216" source="File: odbc:DSN=PANSI;UID=postgres.eomcpaifrcnaezmrdvax;PWD=__EncPwd1__|||select * &#xA;from postgres.&quot;public&quot;.store_demographics" type="V_String" />
+            <Field name="male_driver" size="16777216" source="File: odbc:DSN=PANSI;UID=postgres.eomcpaifrcnaezmrdvax;PWD=__EncPwd1__|||select * &#xA;from postgres.&quot;public&quot;.store_demographics" type="V_String" />
+            <Field name="female_driver" size="16777216" source="File: odbc:DSN=PANSI;UID=postgres.eomcpaifrcnaezmrdvax;PWD=__EncPwd1__|||select * &#xA;from postgres.&quot;public&quot;.store_demographics" type="V_String" />
+            <Field name="young_driver_16_24" size="16777216" source="File: odbc:DSN=PANSI;UID=postgres.eomcpaifrcnaezmrdvax;PWD=__EncPwd1__|||select * &#xA;from postgres.&quot;public&quot;.store_demographics" type="V_String" />
+            <Field name="senior_driver_60plus" size="16777216" source="File: odbc:DSN=PANSI;UID=postgres.eomcpaifrcnaezmrdvax;PWD=__EncPwd1__|||select * &#xA;from postgres.&quot;public&quot;.store_demographics" type="V_String" />
+            <Field name="provisional_driver" size="16777216" source="File: odbc:DSN=PANSI;UID=postgres.eomcpaifrcnaezmrdvax;PWD=__EncPwd1__|||select * &#xA;from postgres.&quot;public&quot;.store_demographics" type="V_String" />
+            <Field name="overseas_licensed_driver" size="16777216" source="File: odbc:DSN=PANSI;UID=postgres.eomcpaifrcnaezmrdvax;PWD=__EncPwd1__|||select * &#xA;from postgres.&quot;public&quot;.store_demographics" type="V_String" />
+            <Field name="unlicensed_driver" size="16777216" source="File: odbc:DSN=PANSI;UID=postgres.eomcpaifrcnaezmrdvax;PWD=__EncPwd1__|||select * &#xA;from postgres.&quot;public&quot;.store_demographics" type="V_String" />
+            <Field name="count_crashes" source="File: odbc:DSN=PANSI;UID=postgres.eomcpaifrcnaezmrdvax;PWD=__EncPwd1__|||select * &#xA;from postgres.&quot;public&quot;.store_demographics" type="Int64" />
+            <Field name="count_casualty_fatality" source="File: odbc:DSN=PANSI;UID=postgres.eomcpaifrcnaezmrdvax;PWD=__EncPwd1__|||select * &#xA;from postgres.&quot;public&quot;.store_demographics" type="Int64" />
+            <Field name="count_casualty_hospitalised" source="File: odbc:DSN=PANSI;UID=postgres.eomcpaifrcnaezmrdvax;PWD=__EncPwd1__|||select * &#xA;from postgres.&quot;public&quot;.store_demographics" type="Int64" />
+            <Field name="count_casualty_medicallytreated" source="File: odbc:DSN=PANSI;UID=postgres.eomcpaifrcnaezmrdvax;PWD=__EncPwd1__|||select * &#xA;from postgres.&quot;public&quot;.store_demographics" type="Int64" />
+            <Field name="count_casualty_minorinjury" source="File: odbc:DSN=PANSI;UID=postgres.eomcpaifrcnaezmrdvax;PWD=__EncPwd1__|||select * &#xA;from postgres.&quot;public&quot;.store_demographics" type="Int64" />
+            <Field name="count_casualty_all" source="File: odbc:DSN=PANSI;UID=postgres.eomcpaifrcnaezmrdvax;PWD=__EncPwd1__|||select * &#xA;from postgres.&quot;public&quot;.store_demographics" type="Int64" />
+            <Field name="dss_created_datetime" source="File: odbc:DSN=PANSI;UID=postgres.eomcpaifrcnaezmrdvax;PWD=__EncPwd1__|||select * &#xA;from postgres.&quot;public&quot;.store_demographics" type="DateTime" />
+            <Field name="active" size="16777216" source="File: odbc:DSN=PANSI;UID=postgres.eomcpaifrcnaezmrdvax;PWD=__EncPwd1__|||select * &#xA;from postgres.&quot;public&quot;.store_demographics" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="88">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="390" y="176" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="7" />
+          <Fields>
+            <Field name="Name" />
+            <Field name="Type" />
+            <Field name="Size" />
+            <Field name="Expression" />
+          </Fields>
+          <Data>
+            <r>
+              <c>CHK_count_crashes</c>
+              <c>Int32</c>
+              <c>4</c>
+              <c>IF [S_count_crashes]=[D_count_crashes] THEN 0 ELSE 1 ENDIF</c>
+            </r>
+            <r>
+              <c>CHK_count_casualty_fatality</c>
+              <c>Int32</c>
+              <c>4</c>
+              <c>IF [S_count_casualty_fatality]=[D_count_casualty_fatality] THEN 0 ELSE 1 ENDIF</c>
+            </r>
+            <r>
+              <c>CHK_count_casualty_hospitalised</c>
+              <c>Int32</c>
+              <c>4</c>
+              <c>IF [S_count_casualty_hospitalised]=[D_count_casualty_hospitalised] THEN 0 ELSE 1 ENDIF</c>
+            </r>
+            <r>
+              <c>CHK_count_casualty_medicallytreated</c>
+              <c>Int32</c>
+              <c>4</c>
+              <c>IF [S_count_casualty_medicallytreated]=[D_count_casualty_medicallytreated] THEN 0 ELSE 1 ENDIF</c>
+            </r>
+            <r>
+              <c>CHK_count_casualty_minorinjury</c>
+              <c>Int32</c>
+              <c>4</c>
+              <c>IF [S_count_casualty_minorinjury]=[D_count_casualty_minorinjury] THEN 0 ELSE 1 ENDIF</c>
+            </r>
+            <r>
+              <c>CHK_count_casualty_all</c>
+              <c>Int32</c>
+              <c>4</c>
+              <c>IF [S_count_casualty_all]=[D_count_casualty_all] THEN 0 ELSE 1 ENDIF</c>
+            </r>
+            <r>
+              <c>CHK_TOTAL</c>
+              <c>Int32</c>
+              <c>4</c>
+              <c>[CHK_count_crashes]+[CHK_count_casualty_fatality]+[CHK_count_casualty_hospitalised]+[CHK_count_casualty_medicallytreated]+[CHK_count_casualty_minorinjury]+[CHK_count_casualty_all]</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="91">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="258" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="id" selected="False" />
+            <SelectField field="crash_year" selected="True" rename="year" />
+            <SelectField field="crash_police_region" selected="True" rename="police_region" />
+            <SelectField field="crash_severity" selected="True" rename="severity" />
+            <SelectField field="involving_male_driver" selected="True" rename="male_driver" />
+            <SelectField field="involving_female_driver" selected="True" rename="female_driver" />
+            <SelectField field="involving_young_driver_16_24" selected="True" rename="young_driver_16_24" />
+            <SelectField field="involving_senior_driver_60plus" selected="True" rename="senior_driver_60plus" />
+            <SelectField field="involving_provisional_driver" selected="True" rename="provisional_driver" />
+            <SelectField field="involving_overseas_licensed_driver" selected="True" rename="overseas_licensed_driver" />
+            <SelectField field="involving_unlicensed_driver" selected="True" rename="unlicensed_driver" />
+            <SelectField field="count_crashes" selected="True" type="Int64" size="8" />
+            <SelectField field="count_casualty_fatality" selected="True" type="Int64" size="8" />
+            <SelectField field="count_casualty_hospitalised" selected="True" type="Int64" size="8" />
+            <SelectField field="count_casualty_medicallytreated" selected="True" type="Int64" size="8" />
+            <SelectField field="count_casualty_minorinjury" selected="True" type="Int64" size="8" />
+            <SelectField field="count_casualty_all" selected="True" type="Int32" size="4" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="93">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="630" y="116" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>&gt;</Operator>
+            <Field>CHK_TOTAL</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2024-02-07 13:56:53</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>0</Operand>
+              <StartDate>2024-02-07 13:56:53</StartDate>
+              <EndDate>2024-02-07 13:56:53</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Check for changes</AnnotationText>
+          <DefaultAnnotationText>[CHK_TOTAL] &gt; 0</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="100">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+        <Position x="858" y="116" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ByName_ErrorMode>Warning</ByName_ErrorMode>
+          <ByName_OutputMode>All</ByName_OutputMode>
+          <Mode>ByName</Mode>
+          <SetOutputOrder value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+    </Node>
+    <Node ToolID="108">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="1146" y="116" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File FileFormat="19" MaxRecords="">.\data\inactive records - demographics.yxdb</File>
+          <Passwords />
+          <Disable>False</Disable>
+          <FormatSpecificOptions>
+            <NoSpatialIndex>False</NoSpatialIndex>
+            <SaveSource>True</SaveSource>
+            <WriteCompatibleVersion>False</WriteCompatibleVersion>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Inactive</AnnotationText>
+          <DefaultAnnotationText>inactive records - demographics.yxdb</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="109">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DynamicRename.DynamicRename">
+        <Position x="990" y="116" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <RenameMode>Formula</RenameMode>
+          <Fields orderChanged="False">
+            <Field name="S_year" />
+            <Field name="S_police_region" />
+            <Field name="S_severity" />
+            <Field name="S_male_driver" />
+            <Field name="S_female_driver" />
+            <Field name="S_young_driver_16_24" />
+            <Field name="S_senior_driver_60plus" />
+            <Field name="S_provisional_driver" />
+            <Field name="S_overseas_licensed_driver" />
+            <Field name="S_unlicensed_driver" />
+            <Field name="S_Count_Crashes" />
+            <Field name="S_Count_Casualty_Fatality" />
+            <Field name="S_Count_Casualty_Hospitalised" />
+            <Field name="S_Count_Casualty_MedicallyTreated" />
+            <Field name="S_Count_Casualty_MinorInjury" />
+            <Field name="S_Count_Casualty_All" />
+            <Field name="S_uid" />
+            <Field name="year" />
+            <Field name="police_region" />
+            <Field name="severity" />
+            <Field name="male_driver" />
+            <Field name="female_driver" />
+            <Field name="young_driver_16_24" />
+            <Field name="senior_driver_60plus" />
+            <Field name="provisional_driver" />
+            <Field name="overseas_licensed_driver" />
+            <Field name="unlicensed_driver" />
+            <Field name="count_crashes" />
+            <Field name="count_casualty_fatality" />
+            <Field name="count_casualty_hospitalised" />
+            <Field name="count_casualty_medicallytreated" />
+            <Field name="count_casualty_minorinjury" />
+            <Field name="count_casualty_all" />
+            <Field name="uid" />
+            <Field name="dss_createdate" />
+            <Field name="active" />
+            <Field name="*Unknown" />
+          </Fields>
+          <Expression>IF left([_CurrentField_],2)="s_" then 
+lowercase(right([_CurrentField_],length([_CurrentField_])-2))
+ELSE [_CurrentField_] ENDIF</Expression>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="year" size="16777216" source="File: (Multiple Sources)" type="V_WString" />
+            <Field name="police_region" size="16777216" source="File: (Multiple Sources)" type="V_WString" />
+            <Field name="severity" size="16777216" source="File: (Multiple Sources)" type="V_WString" />
+            <Field name="male_driver" size="16777216" source="File: (Multiple Sources)" type="V_WString" />
+            <Field name="female_driver" size="16777216" source="File: (Multiple Sources)" type="V_WString" />
+            <Field name="young_driver_16_24" size="16777216" source="File: (Multiple Sources)" type="V_WString" />
+            <Field name="senior_driver_60plus" size="16777216" source="File: (Multiple Sources)" type="V_WString" />
+            <Field name="provisional_driver" size="16777216" source="File: (Multiple Sources)" type="V_WString" />
+            <Field name="overseas_licensed_driver" size="16777216" source="File: (Multiple Sources)" type="V_WString" />
+            <Field name="unlicensed_driver" size="16777216" source="File: (Multiple Sources)" type="V_WString" />
+            <Field name="count_crashes" source="File: (Multiple Sources)" type="Int64" />
+            <Field name="count_casualty_fatality" source="File: (Multiple Sources)" type="Int64" />
+            <Field name="count_casualty_hospitalised" source="(Multiple Sources)" type="Int64" />
+            <Field name="count_casualty_medicallytreated" source="File: (Multiple Sources)" type="Int64" />
+            <Field name="count_casualty_minorinjury" source="File: (Multiple Sources)" type="Int64" />
+            <Field name="count_casualty_all" source="File: (Multiple Sources)" type="Int32" />
+            <Field name="uid" size="1073741823" source="Formula: MD5_UNICODE([year] + [police_region] +[severity] +[male_driver] +[female_driver]+ [young_driver_16_24] +[senior_driver_60plus] +[provisional_driver] +[overseas_licensed_driver] +[unlicensed_driver])" type="V_WString" />
+            <Field name="dss_createdate" source="Formula: DateTimeNow()" type="DateTime" />
+            <Field name="active" size="1073741823" source="Formula: &quot;Y&quot;" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDynamicRename" />
+    </Node>
+    <Node ToolID="111">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="918" y="116" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="DateTimeNow()" field="dss_createdate" size="19" type="DateTime" />
+            <FormulaField expression="&quot;Y&quot;" field="active" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText><![CDATA[ ]]></AnnotationText>
+          <DefaultAnnotationText><![CDATA[dss_createdate = DateTimeNow()
+active = "Y"
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="112">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DynamicSelect.DynamicSelect">
+        <Position x="702" y="116" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Formula</Mode>
+          <Expression>Left([Name],2)="S_"</Expression>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDynamicSelect" />
+    </Node>
+    <Node ToolID="113">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="1074" y="116" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="uid" action="GroupBy" rename="uid" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="101">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="1146" y="188" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File FileFormat="19" MaxRecords="">.\data\new records - demographics.yxdb</File>
+          <Passwords />
+          <Disable>False</Disable>
+          <FormatSpecificOptions>
+            <NoSpatialIndex>False</NoSpatialIndex>
+            <SaveSource>True</SaveSource>
+            <WriteCompatibleVersion>False</WriteCompatibleVersion>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>New</AnnotationText>
+          <DefaultAnnotationText>new records - demographics.yxdb</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="114">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="54" y="126" width="100" height="36" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Demographics</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor r="255" g="255" b="128" />
+          <Shape shape="0" />
+          <Justification Justification="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="116">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DynamicRename.DynamicRename">
+        <Position x="774" y="116" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <RenameMode>Formula</RenameMode>
+          <Fields orderChanged="False">
+            <Field name="S_year" />
+            <Field name="S_police_region" />
+            <Field name="S_severity" />
+            <Field name="S_male_driver" />
+            <Field name="S_female_driver" />
+            <Field name="S_young_driver_16_24" />
+            <Field name="S_senior_driver_60plus" />
+            <Field name="S_provisional_driver" />
+            <Field name="S_overseas_licensed_driver" />
+            <Field name="S_unlicensed_driver" />
+            <Field name="S_Count_Crashes" />
+            <Field name="S_Count_Casualty_Fatality" />
+            <Field name="S_Count_Casualty_Hospitalised" />
+            <Field name="S_Count_Casualty_MedicallyTreated" />
+            <Field name="S_Count_Casualty_MinorInjury" />
+            <Field name="S_Count_Casualty_All" />
+            <Field name="S_uid" />
+            <Field name="*Unknown" />
+          </Fields>
+          <Expression>IF left([_CurrentField_],2)="s_" then 
+lowercase(right([_CurrentField_],length([_CurrentField_])-2))
+ELSE [_CurrentField_] ENDIF</Expression>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="year" size="8190" source="File: select * &#xA;from &quot;load_demographics&quot;" type="V_WString" />
+            <Field name="police_region" size="8190" source="File: select * &#xA;from &quot;load_demographics&quot;" type="V_WString" />
+            <Field name="severity" size="8190" source="File: select * &#xA;from &quot;load_demographics&quot;" type="V_WString" />
+            <Field name="male_driver" size="8190" source="File: select * &#xA;from &quot;load_demographics&quot;" type="V_WString" />
+            <Field name="female_driver" size="8190" source="File: select * &#xA;from &quot;load_demographics&quot;" type="V_WString" />
+            <Field name="young_driver_16_24" size="8190" source="File: select * &#xA;from &quot;load_demographics&quot;" type="V_WString" />
+            <Field name="senior_driver_60plus" size="8190" source="File: select * &#xA;from &quot;load_demographics&quot;" type="V_WString" />
+            <Field name="provisional_driver" size="8190" source="File: select * &#xA;from &quot;load_demographics&quot;" type="V_WString" />
+            <Field name="overseas_licensed_driver" size="8190" source="File: select * &#xA;from &quot;load_demographics&quot;" type="V_WString" />
+            <Field name="unlicensed_driver" size="8190" source="File: select * &#xA;from &quot;load_demographics&quot;" type="V_WString" />
+            <Field name="count_crashes" source="File: select * &#xA;from &quot;load_demographics&quot;" type="Int64" />
+            <Field name="count_casualty_fatality" source="File: select * &#xA;from &quot;load_demographics&quot;" type="Int64" />
+            <Field name="count_casualty_hospitalised" source="Formula: IF [S_Count_Casualty_Hospitalised] = 1 THEN 2 ELSE [S_Count_Casualty_Hospitalised] ENDIF" type="Int64" />
+            <Field name="count_casualty_medicallytreated" source="File: select * &#xA;from &quot;load_demographics&quot;" type="Int64" />
+            <Field name="count_casualty_minorinjury" source="File: select * &#xA;from &quot;load_demographics&quot;" type="Int64" />
+            <Field name="count_casualty_all" source="File: select * &#xA;from &quot;load_demographics&quot;" type="Int32" />
+            <Field name="uid" size="1073741823" source="Formula: MD5_UNICODE([year] + [police_region] +[severity] +[male_driver] +[female_driver]+ [young_driver_16_24] +[senior_driver_60plus] +[provisional_driver] +[overseas_licensed_driver] +[unlicensed_driver])" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDynamicRename" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="51" Connection="Output" />
+      <Destination ToolID="91" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="52" Connection="Output" />
+      <Destination ToolID="57" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="83" Connection="Output" />
+      <Destination ToolID="57" Connection="Right" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="57" Connection="Left" />
+      <Destination ToolID="100" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="116" Connection="Output" />
+      <Destination ToolID="100" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="57" Connection="Join" />
+      <Destination ToolID="58" Connection="Data" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="88" Connection="Output" />
+      <Destination ToolID="58" Connection="Formulas" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="58" Connection="Output" />
+      <Destination ToolID="93" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="91" Connection="Output" />
+      <Destination ToolID="52" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="93" Connection="True" />
+      <Destination ToolID="112" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="100" Connection="Output" />
+      <Destination ToolID="111" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="109" Connection="Output" />
+      <Destination ToolID="101" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="109" Connection="Output" />
+      <Destination ToolID="113" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="111" Connection="Output" />
+      <Destination ToolID="109" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="112" Connection="Output" />
+      <Destination ToolID="116" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="113" Connection="Output" />
+      <Destination ToolID="108" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>02.1_STORE analyse records demographics</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="5b4c6d0b-6e04-4bb0-aa92-91876036b5dd" />
+      <Telemetry>
+        <PreviousWorkflowId value="1763545c-51f9-4dbd-9c01-e9f4ffb8bd86" />
+        <OriginWorkflowId value="9099699e-30f5-460b-86ee-5f8ff0d2330c" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

@@ -1,0 +1,458 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2023.1">
+  <Nodes>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="56" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">.\data\inactive records - demographics.yxdb</File>
+          <FormatSpecificOptions />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>inactive records - demographics.yxdb</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="uid" size="1073741823" source="Summarize: GroupBy - uid" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="31">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="152" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">.\data\new records - demographics.yxdb</File>
+          <FormatSpecificOptions />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>new records - demographics.yxdb</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="year" size="16777216" source="File: odbc:DSN=PANSI;UID=postgres.eomcpaifrcnaezmrdvax;PWD=__EncPwd1__|||select * &#xA;from postgres.&quot;public&quot;.load_demographics" type="V_String" />
+            <Field name="police_region" size="16777216" source="File: odbc:DSN=PANSI;UID=postgres.eomcpaifrcnaezmrdvax;PWD=__EncPwd1__|||select * &#xA;from postgres.&quot;public&quot;.load_demographics" type="V_String" />
+            <Field name="severity" size="16777216" source="File: odbc:DSN=PANSI;UID=postgres.eomcpaifrcnaezmrdvax;PWD=__EncPwd1__|||select * &#xA;from postgres.&quot;public&quot;.load_demographics" type="V_String" />
+            <Field name="male_driver" size="16777216" source="File: odbc:DSN=PANSI;UID=postgres.eomcpaifrcnaezmrdvax;PWD=__EncPwd1__|||select * &#xA;from postgres.&quot;public&quot;.load_demographics" type="V_String" />
+            <Field name="female_driver" size="16777216" source="File: odbc:DSN=PANSI;UID=postgres.eomcpaifrcnaezmrdvax;PWD=__EncPwd1__|||select * &#xA;from postgres.&quot;public&quot;.load_demographics" type="V_String" />
+            <Field name="young_driver_16_24" size="16777216" source="File: odbc:DSN=PANSI;UID=postgres.eomcpaifrcnaezmrdvax;PWD=__EncPwd1__|||select * &#xA;from postgres.&quot;public&quot;.load_demographics" type="V_String" />
+            <Field name="senior_driver_60plus" size="16777216" source="File: odbc:DSN=PANSI;UID=postgres.eomcpaifrcnaezmrdvax;PWD=__EncPwd1__|||select * &#xA;from postgres.&quot;public&quot;.load_demographics" type="V_String" />
+            <Field name="provisional_driver" size="16777216" source="File: odbc:DSN=PANSI;UID=postgres.eomcpaifrcnaezmrdvax;PWD=__EncPwd1__|||select * &#xA;from postgres.&quot;public&quot;.load_demographics" type="V_String" />
+            <Field name="overseas_licensed_driver" size="16777216" source="File: odbc:DSN=PANSI;UID=postgres.eomcpaifrcnaezmrdvax;PWD=__EncPwd1__|||select * &#xA;from postgres.&quot;public&quot;.load_demographics" type="V_String" />
+            <Field name="unlicensed_driver" size="16777216" source="File: odbc:DSN=PANSI;UID=postgres.eomcpaifrcnaezmrdvax;PWD=__EncPwd1__|||select * &#xA;from postgres.&quot;public&quot;.load_demographics" type="V_String" />
+            <Field name="count_crashes" source="File: odbc:DSN=PANSI;UID=postgres.eomcpaifrcnaezmrdvax;PWD=__EncPwd1__|||select * &#xA;from postgres.&quot;public&quot;.load_demographics" type="Int64" />
+            <Field name="count_casualty_fatality" source="File: odbc:DSN=PANSI;UID=postgres.eomcpaifrcnaezmrdvax;PWD=__EncPwd1__|||select * &#xA;from postgres.&quot;public&quot;.load_demographics" type="Int64" />
+            <Field name="count_casualty_hospitalised" source="File: odbc:DSN=PANSI;UID=postgres.eomcpaifrcnaezmrdvax;PWD=__EncPwd1__|||select * &#xA;from postgres.&quot;public&quot;.load_demographics" type="Int64" />
+            <Field name="count_casualty_medicallytreated" source="File: odbc:DSN=PANSI;UID=postgres.eomcpaifrcnaezmrdvax;PWD=__EncPwd1__|||select * &#xA;from postgres.&quot;public&quot;.load_demographics" type="Int64" />
+            <Field name="count_casualty_minorinjury" source="File: odbc:DSN=PANSI;UID=postgres.eomcpaifrcnaezmrdvax;PWD=__EncPwd1__|||select * &#xA;from postgres.&quot;public&quot;.load_demographics" type="Int64" />
+            <Field name="count_casualty_all" source="File: odbc:DSN=PANSI;UID=postgres.eomcpaifrcnaezmrdvax;PWD=__EncPwd1__|||select * &#xA;from postgres.&quot;public&quot;.load_demographics" type="Int32" />
+            <Field name="uid" size="1073741823" source="Formula: MD5_UNICODE([year] + [police_region] +[severity] +[male_driver] +[female_driver]+ [young_driver_16_24] +[senior_driver_60plus] +[provisional_driver] +[overseas_licensed_driver] +[unlicensed_driver])" type="V_WString" />
+            <Field name="dss_createdate" source="Formula: DateTimeNow()" type="DateTime" />
+            <Field name="active" size="1073741823" source="Formula: &quot;Y&quot;" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="33">
+      <GuiSettings>
+        <Position x="174" y="56" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings Macro="CountRecords.yxmc" />
+    </Node>
+    <Node ToolID="34">
+      <GuiSettings>
+        <Position x="162" y="152" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings Macro="CountRecords.yxmc" />
+    </Node>
+    <Node ToolID="35">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="306" y="56" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="&quot;Demographics&quot;" field="Table name" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[Table name = "Demographics"
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="36">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="318" y="152" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="&quot;Demographics&quot;" field="Table name" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[Table name = "Demographics"
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="37">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+        <Position x="426" y="104" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <CartesianMode>Error</CartesianMode>
+          <SelectConfiguration>
+            <Configuration outputConnection="Output">
+              <OrderChanged value="True" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Target_Table name" selected="True" input="Target_" />
+                <SelectField field="Target_Count" selected="True" rename="Changed Records" input="Target_" />
+                <SelectField field="Source_Count" selected="True" rename="New Records" input="Source_" />
+                <SelectField field="Source_Table name" selected="False" rename="Source_Table name" input="Source_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+    </Node>
+    <Node ToolID="29">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="533" y="54" width="589" height="211" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Sending the email for changes</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Sending the email for changes</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="16">
+          <GuiSettings Plugin="PortfolioPluginsGui.ComposerTable.PortfolioComposerTable">
+            <Position x="558" y="103" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TableMode>Basic</TableMode>
+              <GroupingFields orderChanged="False" />
+              <Width>100%</Width>
+              <ShowHeader value="True" />
+              <ShowBarGraph value="False" />
+              <TableFields orderChanged="False">
+                <Field name="Table name" selected="True" Alignment="Left" />
+                <Field name="Changed Records" selected="True" Alignment="Right" />
+                <Field name="New Records" selected="True" Alignment="Right" Width="" Places="0" />
+                <Field name="*Unknown" selected="False" />
+              </TableFields>
+              <TableStyles>
+                <Style Name="Data" Font="B-Calibri" Size="9" TextColor="#000000" BackColor="#ffffff" AltColor="#f0f0f0" RowGroup="1" />
+                <Style Name="Header" Font="--Calibri" Size="11" TextColor="#000000" BackColor="#dbdbdb" />
+                <Style Name="Borders" Width="1" DataColor="#000000" HeaderColor="#000000" RowBorder="None" BasicColBorder="Default (Use Per Column Setting)" />
+                <Style Name="Table" CellPadding="0" ColumnPadding="0" TableBorder="true" Width="1" BorderColor="#000000" />
+              </TableStyles>
+              <StyleRules>
+                <Rule Name="8958452e-06c8-45ac-8d95-39e190e52352">
+                  <RowRule value="True" />
+                  <HighPrecedence value="False" />
+                  <Field />
+                  <Test>Always</Test>
+                  <ApplyTo>Data</ApplyTo>
+                  <SimpleVar />
+                  <SimpleOp>==</SimpleOp>
+                  <SimpleConst>1</SimpleConst>
+                  <Formula>1</Formula>
+                  <Style />
+                  <PrettyName>Row Rule 1</PrettyName>
+                </Rule>
+              </StyleRules>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Basic Table</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="PortfolioPluginsEngine.dll" EngineDllEntryPoint="AlteryxPortfolioComposerTablePlugin" />
+        </Node>
+        <Node ToolID="17">
+          <GuiSettings Plugin="PortfolioPluginsGui.ComposerText.PortfolioComposerText">
+            <Position x="654" y="104" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Images />
+              <Output>Email Text</Output>
+              <HeaderMode value="False" />
+              <RawMode value="False" />
+              <ValidatePCXML value="True" />
+              <Message />
+              <RichTextMode value="True" />
+              <RichTextString><![CDATA[{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil\fcharset0 Arial;}}
+\viewkind4\uc1\pard\f0\fs24 Hi,\par
+Please find below changes to the crash API tables:\line\f1\par
+\par
+}
+]]></RichTextString>
+              <Styles>
+                <Style Name="TextStyle" />
+              </Styles>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Hi,
+Please find below changes ...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="PortfolioPluginsEngine.dll" EngineDllEntryPoint="AlteryxPortfolioComposerTextPlugin" />
+        </Node>
+        <Node ToolID="18">
+          <GuiSettings Plugin="PortfolioPluginsGui.ComposerText.PortfolioComposerText">
+            <Position x="750" y="104" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Images />
+              <Output>Email Text below image</Output>
+              <HeaderMode value="False" />
+              <RawMode value="False" />
+              <ValidatePCXML value="True" />
+              <Message />
+              <RichTextMode value="True" />
+              <RichTextString><![CDATA[{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil\fcharset0 Arial;}}
+\viewkind4\uc1\pard\f0\fs24\par
+\par
+Regards,\par
+Your friendly Alteryx workflow\line\f1\par
+}
+]]></RichTextString>
+              <Styles>
+                <Style Name="TextStyle" />
+              </Styles>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[
+
+Regards,
+Your friendly Alter...]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="PortfolioPluginsEngine.dll" EngineDllEntryPoint="AlteryxPortfolioComposerTextPlugin" />
+        </Node>
+        <Node ToolID="19">
+          <GuiSettings Plugin="PortfolioPluginsGui.ComposerLayout.PortfolioComposerLayout">
+            <Position x="846" y="104" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <GroupingMode>PerRecord</GroupingMode>
+              <PreserveSourceFields value="False" />
+              <Orientation>V</Orientation>
+              <Separator>Continuous</Separator>
+              <Width>80%</Width>
+              <Height />
+              <BorderStyle Enabled="false" Color="#000000" Width="2" />
+              <SeparatorStyle Enabled="false" Color="#000000" Width="1" />
+              <Padding>20</Padding>
+              <LayoutFields orderChanged="True">
+                <Field name="Email Text" selected="True" Width="" Alignment="Center" />
+                <Field name="Table" selected="True" Alignment="Center" Width="" />
+                <Field name="Email Text below image" selected="True" Width="" Alignment="Center" />
+              </LayoutFields>
+              <MergeIntoTable value="False" />
+              <SectionNameForGroup />
+              <SectionNameForAllRecords />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Vertical Layout
+Each Individual Record</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="PortfolioPluginsEngine.dll" EngineDllEntryPoint="AlteryxPortfolioComposerLayoutPlugin" />
+        </Node>
+        <Node ToolID="21">
+          <GuiSettings Plugin="PortfolioPluginsGui.Email.Email">
+            <Position x="1038" y="104" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SMTPServerName>smtp-mail.outlook.com</SMTPServerName>
+              <ToIsField value="False" />
+              <To>nihal.peswani@thedataschool.com.au</To>
+              <CcIsField value="False" />
+              <Cc />
+              <BccIsField value="False" />
+              <Bcc />
+              <FromIsField value="False" />
+              <From>nihal.peswani@thedataschool.com.au</From>
+              <SubjectIsField value="False" />
+              <Subject>Warning! Crash location data changed.</Subject>
+              <BodyIsField value="True" />
+              <Body>Layout</Body>
+              <UserName>nihal.peswani@thedataschool.com.au</UserName>
+              <Enabled>True</Enabled>
+              <Password>4BAFE96915FC1969930E2564447CA973690847B34DD8E58BFBE23</Password>
+              <Port>587</Port>
+              <Encryption>STARTTLS</Encryption>
+              <SMTPAuth value="True" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="PortfolioPluginsEngine.dll" EngineDllEntryPoint="AlteryxComposerEmail" />
+        </Node>
+      </ChildNodes>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="33" Connection="Input8" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="31" Connection="Output" />
+      <Destination ToolID="34" Connection="Input8" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="33" Connection="Output9" />
+      <Destination ToolID="35" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="34" Connection="Output9" />
+      <Destination ToolID="36" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="35" Connection="Output" />
+      <Destination ToolID="37" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="36" Connection="Output" />
+      <Destination ToolID="37" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="37" Connection="Output" />
+      <Destination ToolID="16" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="16" Connection="Output" />
+      <Destination ToolID="17" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="17" Connection="Output" />
+      <Destination ToolID="18" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="18" Connection="Output" />
+      <Destination ToolID="19" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="19" Connection="Output" />
+      <Destination ToolID="21" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="True" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>02.4_STORE emailchanges</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="bf631aee-2c7b-417c-a968-e46e13f080ec" />
+      <Telemetry>
+        <PreviousWorkflowId value="2bea0077-c772-4292-9935-90f594c5df97" />
+        <OriginWorkflowId value="c6de1bf2-e032-4836-99f0-06553fce7b02" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
