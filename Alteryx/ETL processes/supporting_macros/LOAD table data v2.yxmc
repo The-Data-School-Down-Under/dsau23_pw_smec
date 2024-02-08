@@ -1,0 +1,993 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2023.2" RunE2="T">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.Tab.Tab">
+        <Position x="0" y="0" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroInput.MacroInput">
+        <Position x="102" y="294" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UseFileInput value="False" />
+          <Name>Input1</Name>
+          <Abbrev />
+          <ShowFieldMap value="False" />
+          <Optional value="False" />
+          <TextInput>
+            <Configuration>
+              <NumRows value="1" />
+              <Fields>
+                <Field name="source_file" />
+                <Field name="table_name" />
+                <Field name="Batch Number" />
+                <Field name="Value" />
+                <Field name="record" />
+                <Field name="Column headers" />
+              </Fields>
+              <Data>
+                <r>
+                  <c>road_casualties</c>
+                  <c>load_casualties</c>
+                  <c>0</c>
+                  <c>1</c>
+                  <c>0</c>
+                  <c>id</c>
+                </r>
+              </Data>
+            </Configuration>
+          </TextInput>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Input</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="True" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="source_file" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="table_name" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Batch Number" source="TextInput:" type="Int32" />
+            <Field name="Value" source="TextInput:" type="Int32" />
+            <Field name="record" source="TextInput:" type="Int32" />
+            <Field name="Column headers" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroInput" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="306" y="294" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>=</Operator>
+            <Field>source_file</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2024-02-08 10:43:33</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>road_crash_locations</Operand>
+              <StartDate>2024-02-08 10:43:33</StartDate>
+              <EndDate>2024-02-08 10:43:33</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>source data</AnnotationText>
+          <DefaultAnnotationText>[source_file] = "road_crash_locations"</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="source_file" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="table_name" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Batch Number" size="1073741823" source="TextInput:" type="V_WString" />
+            <Field name="Value" size="1073741823" source="TextInput:" type="V_WString" />
+            <Field name="record" size="1073741823" source="TextInput:" type="V_WString" />
+            <Field name="Column headers" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="source_file" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="table_name" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Batch Number" size="1073741823" source="TextInput:" type="V_WString" />
+            <Field name="Value" size="1073741823" source="TextInput:" type="V_WString" />
+            <Field name="record" size="1073741823" source="TextInput:" type="V_WString" />
+            <Field name="Column headers" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.CrossTab.CrossTab">
+        <Position x="378" y="294" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <GroupFields>
+            <Field field="table_name" />
+            <Field field="Batch Number" />
+            <Field field="record" />
+          </GroupFields>
+          <HeaderField field="Column headers" />
+          <DataField field="Value" />
+          <Methods>
+            <Method method="Concat" />
+            <Separator>,</Separator>
+            <FieldSize value="2048" />
+          </Methods>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="table_name" size="2147483647" source="CrossTab:Group:Concat:" type="V_String" />
+            <Field name="Batch Number" size="1073741823" source="CrossTab:Group:Concat:" type="V_WString" />
+            <Field name="record" size="1073741823" source="CrossTab:Group:Concat:" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxCrossTab" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="378" y="234" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="table_name" action="GroupBy" rename="table_name" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="table_name" size="2147483647" source="Summarize: GroupBy - table_name" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DynamicInput.DynamicInput">
+        <Position x="438" y="234" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <InputConfiguration>
+            <Configuration>
+              <Passwords />
+              <File />
+              <FormatSpecificOptions UseDcm="true" RecordLimit="" Format="23">
+                <ReadCentroids>False</ReadCentroids>
+                <Query>select * from "load_casualties" limit 0</Query>
+                <TableStyle>Quoted</TableStyle>
+                <Table />
+                <SessionReadOnly>True</SessionReadOnly>
+                <ReadUncommitted>False</ReadUncommitted>
+                <Connection DcmType="ConnectionId">6542e603-a86d-4a93-9ef6-b48379e5ee14</Connection>
+                <PostSQL />
+                <NoProgress>True</NoProgress>
+                <PreSQLOnConfig>True</PreSQLOnConfig>
+                <PreSQL />
+              </FormatSpecificOptions>
+            </Configuration>
+          </InputConfiguration>
+          <Mode>ModifySQL</Mode>
+          <Modifications>
+            <Modify Action="ReplaceString" Annotation="load_casualties">
+              <Field>table_name</Field>
+              <ReplaceText>load_casualties</ReplaceText>
+            </Modify>
+          </Modifications>
+          <ErrorBehaviour>Error</ErrorBehaviour>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="table_name" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="id" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_ref_number" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_severity" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_year" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_month" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_day_of_week" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_hour" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_nature" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_type" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_longitude" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_latitude" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_street" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_street_intersecting" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="state_road_name" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_suburb" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_local_government_area" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_post_code" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_police_division" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_police_district" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_police_region" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_abs_remoteness" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_queensland_transport_region" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_main_roads_region" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_abs_statistical_area_2" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_abs_statistical_area_3" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_abs_statistical_area_4" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_state_electorate" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_federal_electorate" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_controlling_authority" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_roadway_feature" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_traffic_control" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_speed_limit" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_road_surface_condition" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_atmospheric_condition" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_lighting_condition" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_road_horiz_align" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_road_vert_align" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_dca_code" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_dca_description" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_dca_group_description" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="dca_key_approach_dir" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="count_casualty_fatality" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="count_casualty_hospitalised" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="count_casualty_medicallytreated" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="count_casualty_minorinjury" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="count_casualty_total" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="count_unit_car" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="count_unit_motorcycle_moped" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="count_unit_truck" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="count_unit_bus" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="count_unit_bicycle" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="count_unit_pedestrian" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="count_unit_other" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="Batch Number" source="File: select * from &quot;load_casualties&quot; limit 0" type="Int32" />
+            <Field name="record" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDynamicInput" />
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+        <Position x="522" y="294" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ByName_ErrorMode>Ignore</ByName_ErrorMode>
+          <ByName_OutputMode>All</ByName_OutputMode>
+          <Mode>ByName</Mode>
+          <SetOutputOrder value="True" />
+          <OutputOrder>
+            <Connection>#1</Connection>
+            <Connection>#2</Connection>
+          </OutputOrder>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="table_name" size="1073741823" source="(Multiple Sources)" type="V_WString" />
+            <Field name="id" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_ref_number" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_severity" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_year" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_month" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_day_of_week" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_hour" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_nature" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_type" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_longitude" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_latitude" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_street" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_street_intersecting" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="state_road_name" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_suburb" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_local_government_area" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_post_code" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_police_division" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_police_district" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_police_region" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_abs_remoteness" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_queensland_transport_region" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_main_roads_region" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_abs_statistical_area_2" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_abs_statistical_area_3" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_abs_statistical_area_4" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_state_electorate" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_federal_electorate" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_controlling_authority" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_roadway_feature" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_traffic_control" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_speed_limit" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_road_surface_condition" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_atmospheric_condition" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_lighting_condition" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_road_horiz_align" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_road_vert_align" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_dca_code" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_dca_description" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_dca_group_description" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="dca_key_approach_dir" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="count_casualty_fatality" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="count_casualty_hospitalised" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="count_casualty_medicallytreated" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="count_casualty_minorinjury" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="count_casualty_total" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="count_unit_car" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="count_unit_motorcycle_moped" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="count_unit_truck" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="count_unit_bus" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="count_unit_bicycle" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="count_unit_pedestrian" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="count_unit_other" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="Batch Number" size="1073741823" source="(Multiple Sources)" type="V_WString" />
+            <Field name="record" size="1073741823" source="(Multiple Sources)" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+    </Node>
+    <Node ToolID="9">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="438" y="294" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="table_name" size="2147483647" source="CrossTab:Group:Concat:" type="V_String" />
+            <Field name="Batch Number" size="1073741823" source="CrossTab:Group:Concat:" type="V_WString" />
+            <Field name="record" size="1073741823" source="CrossTab:Group:Concat:" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="10">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.ControlParam.ControlParam">
+        <Position x="306" y="102" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Control Parameter (10)</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="11">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Action.Action">
+        <Position x="306" y="162" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Update Value</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="15">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="234" y="294" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Batch Number" selected="True" type="V_WString" size="2147483647" />
+            <SelectField field="Value" selected="True" type="V_WString" size="2147483647" />
+            <SelectField field="record" selected="True" type="V_WString" size="2147483647" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="source_file" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="table_name" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Batch Number" size="1073741823" source="TextInput:" type="V_WString" />
+            <Field name="Value" size="1073741823" source="TextInput:" type="V_WString" />
+            <Field name="record" size="1073741823" source="TextInput:" type="V_WString" />
+            <Field name="Column headers" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="16">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BlockUntilDone.BlockUntilDone">
+        <Position x="654" y="294" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="table_name" size="1073741823" source="(Multiple Sources)" type="V_WString" />
+            <Field name="id" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_ref_number" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_severity" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_year" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_month" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_day_of_week" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_hour" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_nature" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_type" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_longitude" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_latitude" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_street" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_street_intersecting" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="state_road_name" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_suburb" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_local_government_area" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_post_code" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_police_division" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_police_district" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_police_region" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_abs_remoteness" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_queensland_transport_region" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_main_roads_region" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_abs_statistical_area_2" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_abs_statistical_area_3" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_abs_statistical_area_4" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_state_electorate" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_federal_electorate" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_controlling_authority" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_roadway_feature" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_traffic_control" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_speed_limit" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_road_surface_condition" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_atmospheric_condition" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_lighting_condition" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_road_horiz_align" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_road_vert_align" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_dca_code" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_dca_description" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_dca_group_description" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="dca_key_approach_dir" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="count_casualty_fatality" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="count_casualty_hospitalised" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="count_casualty_medicallytreated" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="count_casualty_minorinjury" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="count_casualty_total" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="count_unit_car" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="count_unit_motorcycle_moped" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="count_unit_truck" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="count_unit_bus" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="count_unit_bicycle" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="count_unit_pedestrian" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="count_unit_other" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Output2">
+          <RecordInfo>
+            <Field name="table_name" size="1073741823" source="(Multiple Sources)" type="V_WString" />
+            <Field name="id" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_ref_number" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_severity" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_year" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_month" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_day_of_week" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_hour" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_nature" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_type" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_longitude" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_latitude" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_street" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_street_intersecting" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="state_road_name" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_suburb" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_local_government_area" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_post_code" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_police_division" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_police_district" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_police_region" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_abs_remoteness" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_queensland_transport_region" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_main_roads_region" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_abs_statistical_area_2" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_abs_statistical_area_3" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_abs_statistical_area_4" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_state_electorate" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_federal_electorate" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_controlling_authority" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_roadway_feature" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_traffic_control" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_speed_limit" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_road_surface_condition" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_atmospheric_condition" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_lighting_condition" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_road_horiz_align" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_road_vert_align" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_dca_code" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_dca_description" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_dca_group_description" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="dca_key_approach_dir" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="count_casualty_fatality" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="count_casualty_hospitalised" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="count_casualty_medicallytreated" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="count_casualty_minorinjury" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="count_casualty_total" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="count_unit_car" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="count_unit_motorcycle_moped" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="count_unit_truck" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="count_unit_bus" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="count_unit_bicycle" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="count_unit_pedestrian" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="count_unit_other" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Output3">
+          <RecordInfo>
+            <Field name="table_name" size="1073741823" source="(Multiple Sources)" type="V_WString" />
+            <Field name="id" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_ref_number" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_severity" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_year" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_month" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_day_of_week" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_hour" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_nature" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_type" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_longitude" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_latitude" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_street" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_street_intersecting" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="state_road_name" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_suburb" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_local_government_area" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_post_code" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_police_division" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_police_district" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_police_region" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_abs_remoteness" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_queensland_transport_region" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_main_roads_region" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_abs_statistical_area_2" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_abs_statistical_area_3" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_abs_statistical_area_4" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_state_electorate" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_federal_electorate" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_controlling_authority" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_roadway_feature" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_traffic_control" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_speed_limit" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_road_surface_condition" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_atmospheric_condition" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_lighting_condition" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_road_horiz_align" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_road_vert_align" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_dca_code" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_dca_description" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_dca_group_description" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="dca_key_approach_dir" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="count_casualty_fatality" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="count_casualty_hospitalised" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="count_casualty_medicallytreated" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="count_casualty_minorinjury" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="count_casualty_total" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="count_unit_car" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="count_unit_motorcycle_moped" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="count_unit_truck" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="count_unit_bus" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="count_unit_bicycle" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="count_unit_pedestrian" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="count_unit_other" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBlockUntilDone" />
+    </Node>
+    <Node ToolID="17">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="714" y="294" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File />
+          <Passwords />
+          <Disable>False</Disable>
+          <FormatSpecificOptions UseDcm="true" MaxRecords="" Format="75">
+            <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+            <PostSQL />
+            <TableStyle>Quoted</TableStyle>
+            <Table>load_casualties</Table>
+            <PreSQL />
+            <Connection DcmType="ConnectionId">7314acd7-e466-4afa-b8e4-679f8280a9a2</Connection>
+            <OutputOption>Delete</OutputOption>
+          </FormatSpecificOptions>
+          <MultiFile value="True" />
+          <MultiFileType>FileName</MultiFileType>
+          <MultiFileField>table_name</MultiFileField>
+          <KeepField value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>dcm:SMEC Bulk — SMEC
+Table=load_casualties</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="18">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="582" y="294" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Batch Number" selected="False" />
+            <SelectField field="record" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="table_name" size="1073741823" source="(Multiple Sources)" type="V_WString" />
+            <Field name="id" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_ref_number" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_severity" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_year" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_month" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_day_of_week" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_hour" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_nature" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_type" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_longitude" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_latitude" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_street" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_street_intersecting" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="state_road_name" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_suburb" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_local_government_area" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_post_code" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_police_division" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_police_district" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_police_region" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_abs_remoteness" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_queensland_transport_region" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_main_roads_region" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_abs_statistical_area_2" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_abs_statistical_area_3" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_abs_statistical_area_4" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_state_electorate" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="loc_federal_electorate" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_controlling_authority" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_roadway_feature" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_traffic_control" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_speed_limit" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_road_surface_condition" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_atmospheric_condition" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_lighting_condition" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_road_horiz_align" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_road_vert_align" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_dca_code" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_dca_description" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="crash_dca_group_description" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="dca_key_approach_dir" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="count_casualty_fatality" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="count_casualty_hospitalised" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="count_casualty_medicallytreated" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="count_casualty_minorinjury" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="count_casualty_total" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="count_unit_car" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="count_unit_motorcycle_moped" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="count_unit_truck" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="count_unit_bus" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="count_unit_bicycle" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="count_unit_pedestrian" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+            <Field name="count_unit_other" size="8190" source="File: select * from &quot;load_casualties&quot; limit 0" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="19">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="654" y="234" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="table_name" action="GroupBy" rename="table_name" />
+            <SummarizeField field="table_name" action="Count" rename="Count" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="table_name" size="1073741823" source="Summarize: GroupBy - table_name" type="V_WString" />
+            <Field name="Count" source="Summarize: Count - table_name" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="20">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Message.Message">
+        <Position x="714" y="234" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <When>Last</When>
+          <Filter />
+          <Type>Message</Type>
+          <Priority>High</Priority>
+          <Transient>False</Transient>
+          <MessageExpression>ToString([Count])+" records written to "+[table_name]</MessageExpression>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="table_name" size="1073741823" source="Summarize: GroupBy - table_name" type="V_WString" />
+            <Field name="Count" source="Summarize: Count - table_name" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMessage" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="15" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="True" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="True" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="9" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="Output" />
+      <Destination ToolID="7" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="7" Connection="Output" />
+      <Destination ToolID="8" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="9" Connection="Output" />
+      <Destination ToolID="8" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="Output" />
+      <Destination ToolID="18" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="10" Connection="Question" />
+      <Destination ToolID="11" Connection="Question" />
+    </Connection>
+    <Connection name="#2" Wireless="True">
+      <Origin ToolID="11" Connection="Action" />
+      <Destination ToolID="3" Connection="Action" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="15" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="16" Connection="Output2" />
+      <Destination ToolID="17" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="18" Connection="Output" />
+      <Destination ToolID="16" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="18" Connection="Output" />
+      <Destination ToolID="19" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="19" Connection="Output" />
+      <Destination ToolID="20" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <Constants>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>Macro Input (2)</Name>
+        <Value />
+        <IsNumeric value="False" />
+      </Constant>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>ControlParam.Control Parameter (10)</Name>
+        <Value />
+        <IsNumeric value="False" />
+      </Constant>
+    </Constants>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>LOAD table data v2</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="0db61014-ceeb-4680-b66d-da5c31bdcea3" />
+      <Telemetry>
+        <PreviousWorkflowId value="" />
+        <OriginWorkflowId value="0db61014-ceeb-4680-b66d-da5c31bdcea3" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="False" />
+    </Events>
+    <RuntimeProperties>
+      <Actions>
+        <NoCondition>
+          <Type>NoCondition</Type>
+          <Description>(Always Run)</Description>
+          <True>
+            <Action>
+              <Type>UpdateValue</Type>
+              <Description />
+              <ToolId value="11" />
+              <Mode>Simple</Mode>
+              <Variable />
+              <Replace value="False" />
+              <Destination>3/Simple/Operands/Operand</Destination>
+            </Action>
+          </True>
+        </NoCondition>
+      </Actions>
+      <Questions>
+        <Question>
+          <Type>Tab</Type>
+          <Description>Questions</Description>
+          <Name>Tab (1)</Name>
+          <ToolId value="1" />
+          <Questions>
+            <Question>
+              <Type>MacroInput</Type>
+              <Description />
+              <Name>Macro Input (2)</Name>
+              <ToolId value="2" />
+            </Question>
+            <Question>
+              <Type>ControlParam</Type>
+              <Description>Select source column</Description>
+              <Name>Control Parameter (10)</Name>
+              <ToolId value="10" />
+            </Question>
+          </Questions>
+        </Question>
+      </Questions>
+      <ModuleType>Macro</ModuleType>
+      <MacroCustomHelp value="False" />
+      <MacroDynamicOutputFields value="False" />
+      <MacroImageStd value="39" />
+      <MacroInputs />
+      <MacroOutputs />
+      <BatchMacro>
+        <OutputMode>AutoByName</OutputMode>
+        <ControlParams>
+          <ControlParam>
+            <Name>Control Parameter (10)</Name>
+            <Description>Select source column</Description>
+          </ControlParam>
+        </ControlParams>
+      </BatchMacro>
+      <Wiz_CustomHelp value="False" />
+      <Wiz_CustomGraphic value="False" />
+      <Wiz_ShowOutput value="True" />
+      <Wiz_OpenOutputTools>
+        <Tool ToolId="2" Selected="True" />
+        <Tool ToolId="17" Selected="True" />
+      </Wiz_OpenOutputTools>
+      <Wiz_OutputMessage />
+      <Wiz_NoOutputFilesMessage />
+      <Wiz_ChainRunWizard />
+    </RuntimeProperties>
+  </Properties>
+</AlteryxDocument>
