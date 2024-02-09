@@ -19,3 +19,6 @@ Dashboard
 - contact Pujiang if you need dashboard files
 - pujiang.zhang@outlook.com
 - pujiang.zhang@thedataschool.com.au
+- spatial file can be downlaod from ABS
+- configure spatial file and hyperfile for spatial_dashboard input
+  
